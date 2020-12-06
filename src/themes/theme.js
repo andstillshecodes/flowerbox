@@ -4,17 +4,21 @@ const theme = {
     secondary: 'Open Sans'
   },
   fontWeights: {
-
+    light: '300',
+    normal: '400',
+    semiBold: '600',
+    bold: '700'
   },
   colors: {
     primary: '#92B2BA',
     secondary: '#F0A8BB',
+    softWhite: '#F5F5F5',
     white: '#FFFFFF',
     black: 'rgb(62,85,90)',
     blackOpaque: 'rgba(62,85,90,0.5)',
     gray: '#EEEEEE'
   },
-  spacings: {
+  sizes: {
     xxSmall: '.25rem',
     xSmall: '.5rem',
     small: '1rem',

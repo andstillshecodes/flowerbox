@@ -1,5 +1,8 @@
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
+
 import 'normalize.css'
+import 'fontsource-dm-sans'
+import 'fontsource-open-sans'
 import theme from './themes/theme'
 import { Footer, Header, Products } from './components'
 
@@ -19,7 +22,10 @@ export default function App() {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 1320px;
+  margin: auto;
   min-height: 100vh;
+  padding: ${props => props.theme.sizes.medium};
 `
 
 const GlobalStyles = createGlobalStyle`
