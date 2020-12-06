@@ -1,17 +1,26 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import 'normalize.css'
 import theme from './themes/theme'
+import { Footer, Header, Products } from './components'
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-
+      <Container>
+        <Header />
+        <Products />
+        <Footer />
+      </Container>
     </ThemeProvider>
   )
 }
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -28,5 +37,9 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
   }
 `
