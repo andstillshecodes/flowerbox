@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import logo from '../images/logo.png'
-import cartIcon from '../images/shopping-cart.svg'
+import logo from '../../images/logo.png'
+import cartIcon from '../../images/shopping-cart.svg'
 
 export const Nav = () => {
   return (

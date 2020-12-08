@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Nav } from './Nav'
-import banner from '../images/banner.png'
+import banner from '../../images/banner.png'
 
 export const Header = () => {
   return (

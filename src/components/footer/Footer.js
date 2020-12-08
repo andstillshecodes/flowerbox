@@ -1,15 +1,10 @@
 import styled from 'styled-components'
-import logo from '../images/logo.png'
+import { Brand } from './Brand'
 
 export const Footer = () => {
   return (
     <FooterWrapper>
-      <Brand>
-        <LogoWrapper>
-          <img src={logo} alt='logo' />
-        </LogoWrapper>
-        <SiteTitle>Flowerbox / EST.2019</SiteTitle>
-      </Brand>
+      <Brand />
 
       <Links>
         <CustomerServiceWrapper>
@@ -83,20 +78,4 @@ const Li = styled.li`
   @media ${props => props.theme.breakpoints.desktop} {
     text-align: right;
   }
-`
-
-const Brand = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
-const LogoWrapper = styled.div`
-  width: ${props => props.theme.sizes.xxLarge};
-`
-
-const SiteTitle = styled.h2`
-  text-transform: uppercase;
-  
 `

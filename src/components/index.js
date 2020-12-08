@@ -1,3 +1,3 @@
-export * from './Footer'
-export * from './Header'
-export * from './Products'
+export * from './footer/Footer'
+export * from './header/Header'
+export * from './products/Products'
