@@ -1,18 +1,12 @@
 import styled from 'styled-components'
 
-import logo from '../../images/logo.png'
 import cartIcon from '../../images/shopping-cart.svg'
-import { H1 } from '../../components'
+import { InlineBrand } from '../../components'
 
 export const Nav = () => {
   return (
     <NavWrapper>
-      <Brand>
-        <LogoWrapper>
-          <img src={logo} alt='logo' />
-        </LogoWrapper>
-        <H1>Flowerbox</H1>
-      </Brand>
+      <InlineBrand />
 
       <CartIconWrapper>
         <img src={cartIcon} alt='shopping cart' />
@@ -30,14 +24,6 @@ const NavWrapper = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: ${props => props.theme.sizes.small};
-`
-
-const Brand = styled.div`
-  display: flex;
-`
-
-const LogoWrapper = styled.div`
-  width: ${props => props.theme.sizes.medium};
 `
 
 const CartIconWrapper = styled.div`
