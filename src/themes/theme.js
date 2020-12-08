@@ -3,6 +3,9 @@ const theme = {
     primary: 'DM Sans',
     secondary: 'Open Sans'
   },
+  fontSizes: {
+    small: '.8rem'
+  },
   fontWeights: {
     light: '300',
     normal: '400',
@@ -16,6 +19,7 @@ const theme = {
     white: '#FFFFFF',
     black: 'rgb(62,85,90)',
     blackOpaque: 'rgba(62,85,90,0.5)',
+    detail: 'rgba(119,119,119,0.25)',
     gray: '#EEEEEE'
   },
   sizes: {

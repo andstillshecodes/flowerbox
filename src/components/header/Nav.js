@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+
 import logo from '../../images/logo.png'
 import cartIcon from '../../images/shopping-cart.svg'
+import { H1 } from '../../components'
 
 export const Nav = () => {
   return (
@@ -9,9 +11,7 @@ export const Nav = () => {
         <LogoWrapper>
           <img src={logo} alt='logo' />
         </LogoWrapper>
-        <SiteTitle>
-          flowerbox
-        </SiteTitle>
+        <H1>Flowerbox</H1>
       </Brand>
 
       <CartIconWrapper>
@@ -38,12 +38,6 @@ const Brand = styled.div`
 
 const LogoWrapper = styled.div`
   width: ${props => props.theme.sizes.medium};
-`
-
-const SiteTitle = styled.h1`#
-  font-family: ${props => props.theme.fonts.primary};
-  font-size: ${props => props.theme.sizes.small};
-  margin-left: ${props => props.theme.sizes.small};
 `
 
 const CartIconWrapper = styled.div`

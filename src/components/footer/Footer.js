@@ -1,32 +1,64 @@
 import styled from 'styled-components'
-import { Brand } from './Brand'
+
+import {
+  BlockBrand,
+  TitledListWrapper,
+  FooterH2,
+  Ul,
+  FooterLi,
+  FooterLink
+} from '../../components'
 
 export const Footer = () => {
   return (
     <FooterWrapper>
-      <Brand />
+      <BlockBrand />
 
-      <Links>
-        <CustomerServiceWrapper>
-          <H2>Customer Service</H2>
+      <FooterLinks>
+        <TitledListWrapper>
+          <FooterH2>Customer Service</FooterH2>
           <Ul>
-            <Li>Satisfaction Commitment</Li>
-            <Li>Delivery Policies</Li>
-            <Li>Cancellations</Li>
-            <Li>Return Policy</Li>
+            <FooterLi>
+              <FooterLink to='/'>
+                Satisfaction Commitment</FooterLink></FooterLi>
+            <FooterLi>
+              <FooterLink to='/'>
+                Delivery Policies</FooterLink></FooterLi>
+            <FooterLi>
+              <FooterLink to='/'>
+                Cancellations</FooterLink></FooterLi>
+            <FooterLi>
+              <FooterLink to='/'>
+                Return Policy</FooterLink></FooterLi>
           </Ul>
-        </CustomerServiceWrapper>
+        </TitledListWrapper>
 
-        <FlowerboxWrapper>
-          <H2>Flowerbox</H2>
+        <TitledListWrapper>
+          <FooterH2>Flowerbox</FooterH2>
           <Ul>
-            <Li>Terms of Service</Li>
-            <Li>Privacy Policy</Li>
-            <Li>Career Opportunities</Li>
-            <Li>More Information</Li>
+            <FooterLi>
+              <FooterLink to='/'>
+                Terms of Service
+              </FooterLink>
+            </FooterLi>
+            <FooterLi>
+              <FooterLink to='/'>
+                Privacy Policy
+              </FooterLink>
+            </FooterLi>
+            <FooterLi>
+              <FooterLink to='/'>
+                Career Opportunities
+              </FooterLink>
+            </FooterLi>
+            <FooterLi>
+              <FooterLink to='/'>
+                More Information
+              </FooterLink>
+            </FooterLi>
           </Ul>
-        </FlowerboxWrapper>
-      </Links>
+        </TitledListWrapper>
+      </FooterLinks>
     </FooterWrapper>
   )
 }
@@ -35,7 +67,6 @@ const FooterWrapper = styled.footer`
   background: ${props => props.theme.colors.gray};
   padding: ${props => props.theme.sizes.small};
 
-
   @media ${props => props.theme.breakpoints.desktop} {
     display: flex;
     flex-direction: row-reverse;
@@ -43,39 +74,8 @@ const FooterWrapper = styled.footer`
   }
 `
 
-const Links = styled.div`
+const FooterLinks = styled.div`
   @media ${props => props.theme.breakpoints.desktop} {
     display: flex;
-  }
-`
-
-const CustomerServiceWrapper = styled.div`
-
-`
-
-const H2 = styled.h2`
-  text-align: center;
-  text-transform: lowercase;
-
-  @media ${props => props.theme.breakpoints.desktop} {
-    text-align: right;
-  }
-`
-
-const FlowerboxWrapper = styled.div`
-
-`
-
-const Ul = styled.ul`
-  list-style: none;
-  text-align: center;
-`
-
-const Li = styled.li`
-  color: ${props => props.theme.colors.blackOpaque};
-  text-transform: uppercase;
-
-  @media ${props => props.theme.breakpoints.desktop} {
-    text-align: right;
   }
 `

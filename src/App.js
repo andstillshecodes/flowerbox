@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import 'normalize.css'
 import 'fontsource-dm-sans'
@@ -6,15 +7,17 @@ import 'fontsource-open-sans'
 import theme from './themes/theme'
 import { Footer, Header, Products } from './components'
 
-export default function App() {
+export default function App () {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Container>
-        <Header />
-        <Products />
-        <Footer />
-      </Container>
+      <BrowserRouter>
+        <Container>
+          <Header />
+          <Products />
+          <Footer />
+        </Container>
+      </BrowserRouter>
     </ThemeProvider>
   )
 }
