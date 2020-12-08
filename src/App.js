@@ -48,4 +48,10 @@ const GlobalStyles = createGlobalStyle`
   img {
     max-width: 100%;
   }
+
+  h2 {
+    color: ${props => props.theme.colors.primary};
+    font-family: ${props => props.theme.fonts.primary};
+    font-size: 1rem;
+  }
 `
