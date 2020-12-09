@@ -33,7 +33,7 @@ const theme = {
   },
   breakpoints: {
     mobile: 'only screen and (max-width: 600px)',
-    tablet: 'only screen and (min-width: 601px) and (max-width: 800px)',
+    tablet: 'only screen and (min-width: 601px)',
     desktop: 'only screen and (min-width: 801px)'
   },
   shadows: {

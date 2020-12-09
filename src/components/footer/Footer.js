@@ -20,16 +20,24 @@ export const Footer = () => {
           <Ul>
             <FooterLi>
               <FooterLink to='/'>
-                Satisfaction Commitment</FooterLink></FooterLi>
+                Satisfaction Commitment
+              </FooterLink>
+            </FooterLi>
             <FooterLi>
               <FooterLink to='/'>
-                Delivery Policies</FooterLink></FooterLi>
+                Delivery Policies
+              </FooterLink>
+            </FooterLi>
             <FooterLi>
               <FooterLink to='/'>
-                Cancellations</FooterLink></FooterLi>
+                Cancellations
+              </FooterLink>
+            </FooterLi>
             <FooterLi>
               <FooterLink to='/'>
-                Return Policy</FooterLink></FooterLi>
+                Return Policy
+              </FooterLink>
+            </FooterLi>
           </Ul>
         </TitledListWrapper>
 

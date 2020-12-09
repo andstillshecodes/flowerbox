@@ -6,6 +6,4 @@ export const Products = () => {
   )
 }
 
-const ProductsWrapper = styled.div`
-  flex-grow: 1;
-`
+const ProductsWrapper = styled.div``

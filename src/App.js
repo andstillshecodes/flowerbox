@@ -1,35 +1,24 @@
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import 'normalize.css'
 import 'fontsource-dm-sans'
 import 'fontsource-open-sans'
 import theme from './themes/theme'
-import { Footer, Header, Products } from './components'
+import { Home } from './pages'
 
 export default function App () {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <BrowserRouter>
-        <Container>
-          <Header />
-          <Products />
-          <Footer />
-        </Container>
+        <Switch>
+          <Route exact path='/' component={Home} />
+        </Switch>
       </BrowserRouter>
     </ThemeProvider>
   )
 }
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 1320px;
-  margin: auto;
-  min-height: 100vh;
-  padding: ${props => props.theme.sizes.medium};
-`
 
 const GlobalStyles = createGlobalStyle`
   * {

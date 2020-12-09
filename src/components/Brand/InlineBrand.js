@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import logo from '../../images/logo.png'
 import {
-  H1,
+  H1
 } from '../../components'
 
 export const InlineBrand = () => {

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import cartIcon from '../../images/shopping-cart.svg'
-import { InlineBrand } from '../../components'
+import { InlineBrand } from '..'
 
 export const Nav = () => {
   return (
@@ -19,7 +19,6 @@ const NavWrapper = styled.nav`
   background: ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.softWhite};
   height: ${props => props.theme.sizes.xLarge};
-  margin-bottom: ${props => props.theme.sizes.medium};
   display: flex;
   align-items: center;
   justify-content: space-between;
