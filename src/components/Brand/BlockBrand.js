@@ -1,9 +1,7 @@
-import React from 'react'
 import styled from 'styled-components'
 
 import logo from '../../images/logo.png'
 import { FaTwitter, FaFacebookSquare, FaInstagram } from 'react-icons/fa'
-import { BrandH2 } from '..'
 
 export const BlockBrand = () => {
   return (
@@ -35,6 +33,12 @@ const BrandWrapper = styled.div`
 
 const LogoWrapper = styled.div`
   width: ${props => props.theme.sizes.xxLarge};
+`
+
+const BrandH2 = styled.h2`
+  color: ${props => props.theme.colors.secondary};
+  font-size: ${props => props.theme.fontSizes.small};
+  text-transform: uppercase;
 `
 
 const SocialIcons = styled.div`

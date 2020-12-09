@@ -1,4 +1,3 @@
-import React from 'react'
 import banner from '../images/banner.png'
 
 import { Layout } from '../layout'

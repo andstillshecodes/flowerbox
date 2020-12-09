@@ -7,7 +7,7 @@ import 'fontsource-open-sans'
 import theme from './themes/theme'
 import { Home } from './pages'
 
-export default function App () {
+export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
@@ -41,9 +41,22 @@ const GlobalStyles = createGlobalStyle`
     max-width: 100%;
   }
 
+  h1 {
+    font-family: ${props => props.theme.fonts.primary};
+    font-size: ${props => props.theme.sizes.small};
+    margin-left: ${props => props.theme.sizes.small};
+    text-transform: lowercase;
+  }
+
   h2 {
     color: ${props => props.theme.colors.primary};
     font-family: ${props => props.theme.fonts.primary};
-    font-size: 1rem;
+    padding: ${props => props.theme.sizes.xSmall};
+    font-size: ${props => props.theme.sizes.small};
+  }
+
+  li {
+    list-style-type: none;
+    color: ${props => props.theme.colors.blackOpaque};
   }
 `

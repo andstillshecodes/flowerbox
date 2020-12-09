@@ -1,5 +1,5 @@
 export * from './Brand'
-export * from './Footer/Footer'
+export * from './Footer'
 export * from './Header/Header'
 export * from './Nav/Nav'
 export * from './Products/Products'

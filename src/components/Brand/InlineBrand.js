@@ -1,10 +1,5 @@
-import React from 'react'
 import styled from 'styled-components'
-
 import logo from '../../images/logo.png'
-import {
-  H1
-} from '../../components'
 
 export const InlineBrand = () => {
   return (
@@ -12,7 +7,7 @@ export const InlineBrand = () => {
       <LogoWrapper>
         <img src={logo} alt='logo' />
       </LogoWrapper>
-      <H1>Flowerbox</H1>
+      <h1>Flowerbox</h1>
     </BrandWrapper>
   )
 }

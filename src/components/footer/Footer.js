@@ -1,67 +1,12 @@
 import styled from 'styled-components'
-
-import {
-  BlockBrand,
-  FooterH2,
-  Ul,
-  FooterLi,
-  FooterLink
-} from '../../components'
+import { BlockBrand, FooterList } from '../../components'
 
 export const Footer = () => {
   return (
     <FooterWrapper>
       <BlockBrand />
-      <TitledListWrapper>
-        <FooterH2>Customer Service</FooterH2>
-        <Ul>
-          <FooterLi>
-            <FooterLink to='/'>
-              Satisfaction Commitment
-            </FooterLink>
-          </FooterLi>
-          <FooterLi>
-            <FooterLink to='/'>
-              Delivery Policies
-            </FooterLink>
-          </FooterLi>
-          <FooterLi>
-            <FooterLink to='/'>
-              Cancellations
-            </FooterLink>
-          </FooterLi>
-          <FooterLi>
-            <FooterLink to='/'>
-              Return Policy
-            </FooterLink>
-          </FooterLi>
-        </Ul>
-      </TitledListWrapper>
-      <TitledListWrapper>
-        <FooterH2>Flowerbox</FooterH2>
-        <Ul>
-          <FooterLi>
-            <FooterLink to='/'>
-              Terms of Service
-            </FooterLink>
-          </FooterLi>
-          <FooterLi>
-            <FooterLink to='/'>
-              Privacy Policy
-            </FooterLink>
-          </FooterLi>
-          <FooterLi>
-            <FooterLink to='/'>
-              Career Opportunities
-            </FooterLink>
-          </FooterLi>
-          <FooterLi>
-            <FooterLink to='/'>
-              More Information
-            </FooterLink>
-          </FooterLi>
-        </Ul>
-      </TitledListWrapper>
+      <FooterList title='Customer Service' links={customerServiceLinks} />
+      <FooterList title='Flowerbox' links={siteLinks} />
     </FooterWrapper>
   )
 }
@@ -84,3 +29,41 @@ const TitledListWrapper = styled.div`
     border-right: 1px solid ${props => props.theme.colors.detail};
   }
 `
+
+const customerServiceLinks = [
+  {
+    title: 'Satisfaction Commitment',
+    url: '/'
+  },
+  {
+    title: 'Delivery Policies',
+    url: '/'
+  },
+  {
+    title: 'Cancellations',
+    url: '/'
+  },
+  {
+    title: 'Return Policy',
+    url: '/'
+  }
+]
+
+const siteLinks = [
+  {
+    title: 'Terms of Service',
+    url: '/'
+  },
+  {
+    title: 'Privacy Policy',
+    url: '/'
+  },
+  {
+    title: 'Career Opportunities',
+    url: '/'
+  },
+  {
+    title: 'More Information',
+    url: '/'
+  }
+]
