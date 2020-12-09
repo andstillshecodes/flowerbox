@@ -28,7 +28,7 @@ const BrandWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media ${props => props.theme.breakpoints.desktop} {
+  @media ${props => props.theme.breakpoints.tablet} {
     padding: ${props => props.theme.sizes.small} ${props => props.theme.sizes.xLarge};
   }
 `
