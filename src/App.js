@@ -1,6 +1,8 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
+import { ProductContextProvider, CartContextProvider } from './contexts'
+
 import 'normalize.css'
 import 'fontsource-dm-sans'
 import 'fontsource-open-sans'
@@ -9,14 +11,18 @@ import { Home } from './pages'
 
 export default function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <BrowserRouter>
-        <Switch>
-          <Route exact path='/' component={Home} />
-        </Switch>
-      </BrowserRouter>
-    </ThemeProvider>
+    <ProductContextProvider>
+      <CartContextProvider>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <BrowserRouter>
+            <Switch>
+              <Route exact path='/' component={Home} />
+            </Switch>
+          </BrowserRouter>
+        </ThemeProvider>
+      </CartContextProvider>
+    </ProductContextProvider>
   )
 }
 
