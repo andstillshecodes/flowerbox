@@ -22,14 +22,6 @@ const FooterWrapper = styled.footer`
   }
 `
 
-const TitledListWrapper = styled.div`
-  padding: ${props => props.theme.sizes.small};
-
-  @media ${props => props.theme.breakpoints.desktop} {
-    border-right: 1px solid ${props => props.theme.colors.detail};
-  }
-`
-
 const customerServiceLinks = [
   {
     title: 'Satisfaction Commitment',

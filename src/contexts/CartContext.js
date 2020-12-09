@@ -1,7 +1,7 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useEffect } from 'react'
 import { commerce } from '../lib/commerce'
 
-const CartContext = createContext()
+export const CartContext = createContext()
 
 export const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState({})
@@ -10,26 +10,33 @@ export const CartContextProvider = ({ children }) => {
     setCart(await commerce.cart.retrieve())
   }
 
-  const handleAddToCart = async ({ productId, quantity }) => {
-    setCart(await commerce.cart.add(productId, quantity))
+  const handleAddToCart = async (productId, quantity) => {
+    const { cart } = await commerce.cart.add(productId, quantity)
+    setCart(cart)
   }
 
-  const handleUpdateCartQty = async ({ productId, quantity }) => {
-    setCart(await commerce.cart.update(productId, { quantity }))
+  const handleUpdateCartQty = async (productId, quantity) => {
+    const { cart } = await commerce.cart.update(productId, { quantity })
+    setCart(cart)
   }
 
-  const handleRemoveFromCart = async ({ productId }) => {
-    setCart(await commerce.cart.remove(productId))
+  const handleRemoveFromCart = async (productId) => {
+    const { cart } = await commerce.cart.remove(productId)
+    setCart(cart)
   }
 
   const handleEmptyCart = async () => {
-    setCart(await commerce.cart.empty())
+    const { cart } = await commerce.cart.empty()
+    setCart(cart)
   }
 
+  useEffect(() => {
+    fetchCart()
+  }, [])
+
   return (
-    <CartContext.Provider value={{ cart }}>
+    <CartContext.Provider value={{ cart, handleAddToCart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart }}>
       {children}
     </CartContext.Provider>
   )
 }
-

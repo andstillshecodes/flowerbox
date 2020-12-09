@@ -1,19 +1,23 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useEffect } from 'react'
 import { commerce } from '../lib/commerce'
 
-const ProductContext = createContext()
+export const ProductContext = createContext()
 
 export const ProductContextProvider = ({ children }) => {
   const [products, setProducts] = useState([])
 
   const fetchProducts = async () => {
-    setProducts(await commerce.products.list())
+    const { data } = await commerce.products.list()
+    setProducts(data)
   }
 
+  useEffect(() => {
+    fetchProducts()
+  }, [])
+
   return (
-    <ProductContext.Provider value={{ products }}>
+    <ProductContext.Provider value={{ products, fetchProducts }}>
       {children}
     </ProductContext.Provider>
   )
 }
-

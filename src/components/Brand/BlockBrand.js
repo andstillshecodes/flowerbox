@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import logo from '../../images/logo.png'
@@ -13,17 +12,17 @@ export const BlockBrand = () => {
       <BrandH2>Flowerbox / EST.2019</BrandH2>
       <SocialIcons>
         <SocialIconWrapper>
-          <a href='https://twitter.com' target='_blank'>
+          <a href='https://twitter.com' target='_blank' rel='noreferrer'>
             <FaTwitter />
           </a>
         </SocialIconWrapper>
         <SocialIconWrapper>
-          <a href='https://facebook.com' target='_blank'>
+          <a href='https://facebook.com' target='_blank' rel='noreferrer'>
             <FaFacebookSquare />
           </a>
         </SocialIconWrapper>
         <SocialIconWrapper>
-          <a href='https://instagram.com' target='_blank'>
+          <a href='https://instagram.com' target='_blank' rel='noreferrer'>
             <FaInstagram />
           </a>
         </SocialIconWrapper>
