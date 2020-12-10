@@ -4,7 +4,9 @@ const theme = {
     secondary: 'Open Sans'
   },
   fontSizes: {
-    small: '.8rem'
+    small: '.8rem',
+    medium: '1rem',
+    large: '1.2rem'
   },
   fontWeights: {
     light: '300',
@@ -37,7 +39,7 @@ const theme = {
     desktop: 'only screen and (min-width: 801px)'
   },
   shadows: {
-
+    primary: '2px 4px 4px rgba(119,119,119,0.25)',
   }
 }
 

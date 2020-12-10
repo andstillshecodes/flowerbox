@@ -29,7 +29,7 @@ export const Layout = ({ banner, children }) => {
 const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1320px;
+  max-width: 1100px;
   margin: auto;
   min-height: 100vh;
   padding: ${props => props.theme.sizes.small};

@@ -9,7 +9,7 @@ import 'fontsource-open-sans'
 import theme from './themes/theme'
 import { Home } from './pages'
 
-export default function App () {
+export default function App() {
   return (
     <ProductContextProvider>
       <CartContextProvider>
@@ -65,5 +65,18 @@ const GlobalStyles = createGlobalStyle`
   li {
     list-style-type: none;
     color: ${props => props.theme.colors.blackOpaque};
+  }
+
+  button {
+    background: none;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 `
