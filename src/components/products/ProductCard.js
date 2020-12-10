@@ -17,7 +17,7 @@ export const ProductCard = ({ product }) => {
         <Price>${product.price.raw}</Price>
         <Button type='button'>Add to Cart</Button>
       </CardBottom>
-    </Li >
+    </Li>
   )
 }
 
