@@ -16,7 +16,6 @@ export const Products = () => {
   )
 }
 
-
 const ProductsWrapper = styled.div`
   display: grid;
   align-items: center;

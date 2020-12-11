@@ -17,6 +17,7 @@ export const ProductCard = ({ product }) => {
     </Li>
   )
 }
+
 const Li = styled.li`
   width: 100%;
   box-shadow: ${props => props.theme.shadows.primary};
