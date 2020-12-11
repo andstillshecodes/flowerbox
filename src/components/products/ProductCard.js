@@ -1,8 +1,14 @@
+import { useContext } from 'react'
 import styled from 'styled-components'
 import { FaInfoCircle } from 'react-icons/fa'
 
+import { CartContext } from '../../contexts'
+
 export const ProductCard = ({ product }) => {
+  const { handleAddToCart } = useContext(CartContext)
+
   const showInfo = () => console.log(product)
+
   return (
     <Li>
       <img src={product.media.source} alt={product.name} />
@@ -12,7 +18,7 @@ export const ProductCard = ({ product }) => {
       </CardTop>
       <CardBottom>
         <Price>${product.price.raw}</Price>
-        <Button type='button' onClick={showInfo}>Add to Cart</Button>
+        <Button type='button' onClick={() => handleAddToCart(product.id, 1)}>Add to Cart</Button>
       </CardBottom>
     </Li>
   )
