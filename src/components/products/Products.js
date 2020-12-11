@@ -16,13 +16,10 @@ export const Products = () => {
   )
 }
 
+
 const ProductsWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  
-  
-  @media ${props => props.theme.breakpoints.tablet}{
-    justify-content: space-between;
-  }
+  display: grid;
+  align-items: center;
+  grid-gap: ${props => props.theme.sizes.small};
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) ) ;
 `
