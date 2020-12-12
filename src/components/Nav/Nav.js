@@ -1,9 +1,10 @@
 import { useContext } from 'react'
 import { CartContext } from '../../contexts'
-import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
+import styled from 'styled-components'
 import cartIcon from '../../images/shopping-cart.svg'
-import { InlineBrand } from '..'
+import { InlineBrand } from '../../components'
 
 export const Nav = () => {
   const { cart } = useContext(CartContext)
@@ -11,11 +12,12 @@ export const Nav = () => {
   return (
     <NavWrapper>
       <InlineBrand />
-
-      <CartIconWrapper>
-        <span>{cart.total_items}</span>
-        <img src={cartIcon} alt='shopping cart' />
-      </CartIconWrapper>
+      <Link to='/cart'>
+        <CartIconWrapper>
+          <span>{cart.total_items}</span>
+          <img src={cartIcon} alt='shopping cart' />
+        </CartIconWrapper>
+      </Link>
     </NavWrapper>
   )
 }

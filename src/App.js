@@ -8,7 +8,7 @@ import 'fontsource-dm-sans'
 import 'fontsource-open-sans'
 import theme from './themes/theme'
 import { AppLayout } from './layout'
-import { Home } from './pages'
+import { Cart, Home } from './pages'
 
 export default function App () {
   return (
@@ -20,6 +20,7 @@ export default function App () {
             <AppLayout>
               <Switch>
                 <Route exact path='/' component={Home} />
+                <Route exact path='/cart' component={Cart} />
               </Switch>
             </AppLayout>
           </BrowserRouter>
