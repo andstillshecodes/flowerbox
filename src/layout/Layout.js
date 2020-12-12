@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-import { SectionSeparator } from '../layout'
 import {
   Header,
   Footer,
@@ -11,24 +10,20 @@ export const Layout = ({ banner, children }) => {
   return (
     <LayoutWrapper>
       <Nav />
-      <SectionSeparator />
-
-      <Header banner={banner} />
-      <SectionSeparator />
-
       <PageWrapper>
-        {children}
+        <Header banner={banner} />
+        <div>
+          {children}
+        </div>
       </PageWrapper>
-      <SectionSeparator />
-
       <Footer />
     </LayoutWrapper>
   )
 }
 
 const LayoutWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-gap: ${props => props.theme.sizes.xSmall};
   max-width: 1100px;
   margin: auto;
   min-height: 100vh;
@@ -36,9 +31,16 @@ const LayoutWrapper = styled.div`
 
   @media ${props => props.theme.breakpoints.tablet} {
     padding: ${props => props.theme.sizes.medium};
+    grid-gap: ${props => props.theme.sizes.small};
   }
 `
 
 const PageWrapper = styled.main`
   flex-grow: 1;
+  display: grid;
+  grid-gap: ${props => props.theme.sizes.xSmall};
+
+  @media ${props => props.theme.breakpoints.tablet} {
+    grid-gap: ${props => props.theme.sizes.small};
+  }
 `
