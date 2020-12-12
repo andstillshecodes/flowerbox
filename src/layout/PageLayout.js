@@ -13,6 +13,7 @@ export const PageLayout = ({ banner, children }) => {
 }
 
 const PageLayoutWrapper = styled.div`
+  flex-grow: 1;
   display: grid;
   margin: ${props => props.theme.sizes.xSmall} auto;
   grid-gap: ${props => props.theme.sizes.xSmall};

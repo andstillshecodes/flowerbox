@@ -17,14 +17,14 @@ const LayoutWrapper = styled.div`
   max-width: 1000px;
   margin: auto;
   padding: ${props => props.theme.sizes.small};
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 `
 
 const ContentWrapper = styled.div`
-  grid-area: 3 / 2 / 4 / 3;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   overflow: scroll;
-  padding-bottom: ${props => props.theme.sizes.xSmall};
-
-  @media ${props => props.theme.breakpoints.tablet} {
-    padding-bottom: 2rem;
-  }
 `
