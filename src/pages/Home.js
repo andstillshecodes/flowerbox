@@ -1,11 +1,11 @@
 import banner from '../images/banner.png'
-import { Layout } from '../layout'
+import { PageLayout } from '../layout'
 import { Products } from '../components'
 
 export const Home = () => {
   return (
-    <Layout banner={banner}>
+    <PageLayout banner={banner}>
       <Products />
-    </Layout>
+    </PageLayout>
   )
 }

@@ -7,18 +7,21 @@ import 'normalize.css'
 import 'fontsource-dm-sans'
 import 'fontsource-open-sans'
 import theme from './themes/theme'
+import { AppLayout } from './layout'
 import { Home } from './pages'
 
-export default function App () {
+export default function App() {
   return (
     <ProductContextProvider>
       <CartContextProvider>
         <ThemeProvider theme={theme}>
           <GlobalStyles />
           <BrowserRouter>
-            <Switch>
-              <Route exact path='/' component={Home} />
-            </Switch>
+            <AppLayout>
+              <Switch>
+                <Route exact path='/' component={Home} />
+              </Switch>
+            </AppLayout>
           </BrowserRouter>
         </ThemeProvider>
       </CartContextProvider>
