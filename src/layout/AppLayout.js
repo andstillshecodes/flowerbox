@@ -14,8 +14,9 @@ export const AppLayout = ({ children }) => {
 }
 
 const LayoutWrapper = styled.div`
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
+  padding: ${props => props.theme.sizes.small};
 `
 
 const ContentWrapper = styled.div`
