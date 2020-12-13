@@ -10,9 +10,17 @@ export const CartQty = ({ id, quantity }) => {
 
   return (
     <div>
-      <SmallBtn onClick={() => handleUpdateCartQty(id, quantity - 1)}><FaMinusSquare /></SmallBtn>
+      <SmallBtn
+        onClick={() => handleUpdateCartQty(id, quantity - 1)}
+        ariaLabel='Add one'>
+        <FaMinusSquare />
+      </SmallBtn>
       <span>{quantity}</span>
-      <SmallBtn onClick={() => handleUpdateCartQty(id, quantity + 1)}><FaPlusSquare /></SmallBtn>
+      <SmallBtn
+        onClick={() => handleUpdateCartQty(id, quantity + 1)}
+        ariaLabel='Remove one'>
+        <FaPlusSquare />
+      </SmallBtn>
     </div>
   )
 }
