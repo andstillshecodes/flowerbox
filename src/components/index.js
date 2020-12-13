@@ -1,4 +1,5 @@
 export * from './Brand'
+export * from './CartItem'
 export * from './Footer'
 export * from './Banner'
 export * from './Buttons'

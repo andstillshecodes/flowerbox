@@ -1,2 +1,2 @@
 export * from './AddToCart'
-export * from './CircleBtn'
+export * from './SmallBtn'

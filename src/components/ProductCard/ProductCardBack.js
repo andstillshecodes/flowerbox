@@ -1,14 +1,14 @@
 import styled from 'styled-components'
-import { AddToCart, CircleBtn } from '../../components'
+import { AddToCart, SmallBtn } from '../../components'
 import { FaTimesCircle } from 'react-icons/fa'
 
 export const ProductCardBack = ({ product, setShowBack }) => {
   console.log(product)
   return (
     <CardBack>
-      <CircleBtn onClick={() => setShowBack(false)} ariaLabel='Close Info'>
+      <SmallBtn onClick={() => setShowBack(false)} ariaLabel='Close Info'>
         <FaTimesCircle />
-      </CircleBtn>
+      </SmallBtn>
       <CardTop>
         <ImgWrapper>
           <img

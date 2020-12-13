@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { AddToCart, CircleBtn } from '../../components'
+import { AddToCart, SmallBtn } from '../../components'
 import { FaInfoCircle } from 'react-icons/fa'
 
 export const ProductCardFront = ({ product, setShowBack }) => {
@@ -12,7 +12,7 @@ export const ProductCardFront = ({ product, setShowBack }) => {
         style={imgStyles} />
       <CardTop>
         <Title>{product.name}</Title>
-        <CircleBtn type='button' onClick={() => setShowBack(true)} ariaLabel='Show Info'><FaInfoCircle /></CircleBtn>
+        <SmallBtn type='button' onClick={() => setShowBack(true)} ariaLabel='Show Info'><FaInfoCircle /></SmallBtn>
       </CardTop>
       <AddToCart product={product} />
     </div>

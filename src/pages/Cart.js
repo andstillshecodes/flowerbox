@@ -5,19 +5,16 @@ import { CartContext } from '../contexts'
 import styled from 'styled-components'
 import banner from '../images/banner-cart.png'
 import { PageLayout } from '../layout'
+import { CartItem } from '../components'
 
 export const Cart = () => {
   const { cart } = useContext(CartContext)
-  console.log(cart)
 
   return (
     <PageLayout banner={banner}>
       <ul>
-        {cart.line_items?.map(product => (
-          <li key={product.id}>
-            {product.name.toLowerCase()}
-
-          </li>
+        {cart.line_items?.map(item => (
+          <CartItem key={item.id} item={item} />
         ))}
       </ul>
     </PageLayout>
