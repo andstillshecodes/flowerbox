@@ -5,7 +5,11 @@ import { FaInfoCircle } from 'react-icons/fa'
 export const ProductCardFront = ({ product, setShowBack }) => {
   return (
     <div>
-      <img src={product.media.source} alt={product.name} />
+      <img
+        src={product.media.source}
+        alt={product.name}
+        onClick={() => setShowBack(true)}
+        style={imgStyles} />
       <CardTop>
         <Title>{product.name}</Title>
         <CircleBtn type='button' onClick={() => setShowBack(true)} ariaLabel='Show Info'><FaInfoCircle /></CircleBtn>
@@ -29,3 +33,7 @@ const Title = styled.div`
   font-size: ${props => props.theme.fontSizes.medium};
   text-transform: lowercase;
 `
+
+const imgStyles = {
+  cursor: 'pointer'
+}
