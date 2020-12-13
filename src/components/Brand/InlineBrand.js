@@ -10,7 +10,7 @@ export const InlineBrand = () => {
         <LogoWrapper>
           <img src={logo} alt='logo' />
         </LogoWrapper>
-        <h1>Flowerbox</h1>
+        <H1>Flowerbox</H1>
       </BrandWrapper>
     </Link>
   )
@@ -23,4 +23,8 @@ const BrandWrapper = styled.div`
 
 const LogoWrapper = styled.div`
   width: ${props => props.theme.sizes.medium};
+`
+
+const H1 = styled.h1`
+  margin-left: ${props => props.theme.sizes.small};
 `
