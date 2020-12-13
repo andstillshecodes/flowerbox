@@ -14,7 +14,10 @@ export const Nav = () => {
       <InlineBrand />
       <Link to='/cart'>
         <CartIconWrapper>
-          <span>{cart.total_items}</span>
+          {cart.total_items > 0
+            ? <span>{cart.total_items}</span>
+            : null
+          }
           <img src={cartIcon} alt='shopping cart' />
         </CartIconWrapper>
       </Link>
