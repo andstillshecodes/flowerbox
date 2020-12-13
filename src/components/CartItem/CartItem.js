@@ -13,7 +13,7 @@ export const CartItem = ({ item }) => {
         />
       </ImgWrapper>
       <p>{item.name.toLowerCase()}</p>
-      <CartQty quantity={item.quantity} />
+      <CartQty id={item.id} quantity={item.quantity} />
     </Li>
   )
 }
