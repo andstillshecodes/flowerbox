@@ -2,18 +2,17 @@ import styled from 'styled-components'
 import { AddToCart, CircleBtn } from '../../components'
 import { FaTimesCircle } from 'react-icons/fa'
 
-export const ProductCardBack = ({ product }) => {
-  const close = () => console.log('closed')
-
+export const ProductCardBack = ({ product, setShowBack }) => {
   return (
-    <CardBack style={{ border: '1px solid tomato' }}>
-      <CircleBtn onClick={close}>
+    <CardBack>
+      <CircleBtn onClick={() => setShowBack(false)}>
         <FaTimesCircle />
       </CircleBtn>
       <img
         style={imgStyles}
         src={product.media.source}
-        alt={product.name} />
+        alt={product.name}
+      />
       <H2>{product.name.toLowerCase()}</H2>
       <AddToCart product={product} />
       <p dangerouslySetInnerHTML={{ __html: product.description }} />
@@ -43,5 +42,5 @@ const H2 = styled.h2`
 
 const imgStyles = {
   width: '4rem',
-  borderRadius: '50%',
+  borderRadius: '50%'
 }

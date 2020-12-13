@@ -2,7 +2,6 @@ import { useContext } from 'react'
 
 import { CartContext } from '../contexts'
 
-import styled from 'styled-components'
 import { PageLayout } from '../layout'
 
 export const Cart = () => {
