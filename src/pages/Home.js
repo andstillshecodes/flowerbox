@@ -1,4 +1,4 @@
-import banner from '../images/banner.png'
+import banner from '../images/banner-home.png'
 import { PageLayout } from '../layout'
 import { Products } from '../components'
 

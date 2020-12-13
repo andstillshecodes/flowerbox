@@ -10,7 +10,7 @@ import theme from './themes/theme'
 import { AppLayout } from './layout'
 import { Cart, Home } from './pages'
 
-export default function App () {
+export default function App() {
   return (
     <ProductContextProvider>
       <CartContextProvider>
@@ -53,6 +53,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
+    color: ${props => props.theme.colors.secondary};
     font-family: ${props => props.theme.fonts.primary};
     font-size: ${props => props.theme.fontSizes.medium};
     text-transform: lowercase;

@@ -6,7 +6,8 @@ const theme = {
   fontSizes: {
     small: '.8rem',
     medium: '1rem',
-    large: '1.2rem'
+    large: '1.2rem',
+    xLarge: '1.8rem'
   },
   fontWeights: {
     light: '300',

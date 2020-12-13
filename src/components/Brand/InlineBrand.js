@@ -26,5 +26,6 @@ const LogoWrapper = styled.div`
 `
 
 const H1 = styled.h1`
+  color: ${props => props.theme.colors.softWhite};
   margin-left: ${props => props.theme.sizes.small};
 `
