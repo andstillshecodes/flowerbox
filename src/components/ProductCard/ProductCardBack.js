@@ -3,18 +3,25 @@ import { AddToCart, CircleBtn } from '../../components'
 import { FaTimesCircle } from 'react-icons/fa'
 
 export const ProductCardBack = ({ product, setShowBack }) => {
+  console.log(product)
   return (
     <CardBack>
-      <CircleBtn onClick={() => setShowBack(false)}>
+      <CircleBtn onClick={() => setShowBack(false)} ariaLabel='Close Info'>
         <FaTimesCircle />
       </CircleBtn>
-      <img
-        style={imgStyles}
-        src={product.media.source}
-        alt={product.name}
-      />
-      <H2>{product.name.toLowerCase()}</H2>
-      <AddToCart product={product} />
+      <CardTop>
+        <ImgWrapper>
+          <img
+            style={imgStyles}
+            src={product.media.source}
+            alt={product.name}
+          />
+        </ImgWrapper>
+        <div>
+          <H2>{product.name.toLowerCase()}</H2>
+          <AddToCart product={product} />
+        </div>
+      </CardTop>
       <p dangerouslySetInnerHTML={{ __html: product.description }} />
     </CardBack>
   )
@@ -30,17 +37,32 @@ const CardBack = styled.div`
   background: ${props => props.theme.colors.softWhite};
   padding: ${props => props.theme.sizes.xSmall};
 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
 
   @media ${props => props.theme.breakpoints.tablet} {
     padding: ${props => props.theme.sizes.small}; 
   }
 `
 
+const CardTop = styled.div`
+  display: flex; 
+  align-items: center;
+  width: 100%;
+`
+
 const H2 = styled.h2`
   font-size: ${props => props.theme.fontSizes.large};
 `
 
+const ImgWrapper = styled.div`
+  width: 4rem;
+  margin-right: ${props => props.theme.sizes.xSmall};
+`
+
 const imgStyles = {
-  width: '4rem',
+  width: '100%',
   borderRadius: '50%'
 }

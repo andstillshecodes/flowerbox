@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-export const CircleBtn = ({ onClick, children }) => {
+export const CircleBtn = ({ onClick, children, ariaLabel }) => {
   return (
-    <BtnWrapper onClick={onClick}>
+    <BtnWrapper onClick={onClick} ariaLabel={ariaLabel}>
       {children}
     </BtnWrapper>
   )
