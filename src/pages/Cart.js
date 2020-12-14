@@ -8,7 +8,7 @@ import { PageLayout } from '../layout'
 import { CartItem } from '../components'
 
 export const Cart = () => {
-  const { cart } = useContext(CartContext)
+  const { cart, handleEmptyCart } = useContext(CartContext)
   console.log(cart)
 
   return (
@@ -19,6 +19,9 @@ export const Cart = () => {
         ))}
       </Ul>
       <PriceInfo>
+        <EmptyCart type='button' onClick={() => handleEmptyCart()} >
+          Empty Cart
+        </EmptyCart>
         <Total>Subotal: {cart.subtotal?.formatted_with_symbol}</Total>
       </PriceInfo>
     </PageLayout>
@@ -38,6 +41,18 @@ const Total = styled.div`
   padding: ${props => props.theme.sizes.small};
   background: ${props => props.theme.colors.gray};
   color: ${props => props.theme.colors.primary};
-  max-width: 200px;
-  overflow: scroll;
+  margin: ${props => props.theme.sizes.xSmall};
+`
+
+const EmptyCart = styled.div`
+  text-transform: lowercase;
+  text-align: right;
+  padding: ${props => props.theme.sizes.small};
+  background: ${props => props.theme.colors.gray};
+  color: ${props => props.theme.colors.primary};
+  margin: ${props => props.theme.sizes.xSmall};
+
+  &:hover {
+    cursor: pointer;
+  }
 `
