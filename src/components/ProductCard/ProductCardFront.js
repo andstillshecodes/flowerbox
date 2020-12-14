@@ -9,7 +9,8 @@ export const ProductCardFront = ({ product, setShowBack }) => {
         src={product.media.source}
         alt={product.name}
         onClick={() => setShowBack(true)}
-        style={imgStyles} />
+        style={imgStyles}
+      />
       <CardTop>
         <Title>{product.name}</Title>
         <SmallBtn type='button' onClick={() => setShowBack(true)} ariaLabel='Show Info'><FaInfoCircle /></SmallBtn>

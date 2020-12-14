@@ -16,8 +16,7 @@ export const Nav = () => {
         <CartIconWrapper>
           {cart.total_items > 0
             ? <span>{cart.total_items}</span>
-            : null
-          }
+            : null}
           <img src={cartIcon} alt='shopping cart' />
         </CartIconWrapper>
       </Link>

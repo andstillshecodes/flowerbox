@@ -19,7 +19,7 @@ export const Cart = () => {
         ))}
       </Ul>
       <PriceInfo>
-        <EmptyCart type='button' onClick={() => handleEmptyCart()} >
+        <EmptyCart type='button' onClick={() => handleEmptyCart()}>
           Empty Cart
         </EmptyCart>
         <Total>Subotal: {cart.subtotal?.formatted_with_symbol}</Total>
