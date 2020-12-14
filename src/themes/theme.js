@@ -18,6 +18,8 @@ const theme = {
   colors: {
     primary: '#92B2BA',
     secondary: '#F0A8BB',
+    secondaryLight: '#FFDCE0',
+    terciary: '',
     softWhite: '#F5F5F5',
     white: '#FFFFFF',
     black: 'rgb(62,85,90)',

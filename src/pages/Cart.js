@@ -9,19 +9,35 @@ import { CartItem } from '../components'
 
 export const Cart = () => {
   const { cart } = useContext(CartContext)
+  console.log(cart)
 
   return (
     <PageLayout banner={banner}>
-      <ul>
+      <Ul>
         {cart.line_items?.map(item => (
           <CartItem key={item.id} item={item} />
         ))}
-      </ul>
+      </Ul>
+      <PriceInfo>
+        <Total>Subotal: {cart.subtotal?.formatted_with_symbol}</Total>
+      </PriceInfo>
     </PageLayout>
   )
 }
 
+const Ul = styled.ul``
 
-const H1 = styled.h1`
-  font-size: ${props => props.theme.fontSizes.xLarge};
+const PriceInfo = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`
+
+const Total = styled.div`
+  text-transform: lowercase;
+  text-align: right;
+  padding: ${props => props.theme.sizes.small};
+  background: ${props => props.theme.colors.gray};
+  color: ${props => props.theme.colors.primary};
+  max-width: 200px;
+  overflow: scroll;
 `
