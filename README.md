@@ -1,7 +1,7 @@
 # Flowerbox
 <p>
   Author: 
-  <a href='https://github.com/aexcode'>aexcode</a> 
+  <a href='https://aexcode.com'>aexcode</a> 
 </p>
 
 <p> 
@@ -19,6 +19,6 @@
 
 ## Credits
 <ul>
-<li>Initial Mockup: Jerrica Bobadilla (<a href='https://generalassemb.ly/' target='_blank'>General Assembly</a>) </li>
+<li>Initial Mockup: Jerrica Bobadilla (<a href='https://generalassemb.ly/' target='_blank'>General Assembly</a>) adapted by <a href='https://aexcode.com' target='_blank'>aexcode</a></li>
 <li>SVG Icons - <a href='https://fontawesome.com/' target='_blank'>FontAwesome</a> via <a href='https://react-icons.github.io/react-icons/' target='_blank'>React Icons</a></li>
 </ul>
