@@ -5,7 +5,7 @@
   "dependencies": {
     "fontsource-dm-sans": "^3.1.5",
     "@chec/commerce.js": "^2.8.0",
-    "fontsource-open-sans": "^3.0.9",
+    "fontsource-open-sans": "^3.1.5",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
